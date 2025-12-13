@@ -1,0 +1,58 @@
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.game-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.move-button {
+  width: 150px;
+  height: 150px;
+  font-size: 60px;
+  margin: 10px;
+  transition: transform 0.2s;
+}
+
+.move-button:hover {
+  transform: scale(1.1);
+}
+
+.score-card {
+  min-width: 200px;
+}
+
+.game-status {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.winner-announcement {
+  font-size: 32px;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.move-display {
+  font-size: 80px;
+  margin: 20px;
+}
+
+.chain-info {
+  font-family: monospace;
+  font-size: 12px;
+  word-break: break-all;
+}

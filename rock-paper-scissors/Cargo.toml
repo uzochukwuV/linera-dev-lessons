@@ -1,0 +1,29 @@
+[package]
+name = "rock-paper-scissors"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-graphql = "=7.0.17"
+linera-sdk = "0.15.7"
+serde = { version = "1.0.215", features = ["derive"] }
+thiserror = "2.0.9"
+blake3 = "1.5.5"
+
+[dev-dependencies]
+linera-sdk = { version = "0.15.7", features = ["test"] }
+
+[build-dependencies]
+linera-sdk = "0.15.7"
+
+[[bin]]
+name = "rock_paper_scissors_contract"
+path = "src/contract.rs"
+
+[[bin]]
+name = "rock_paper_scissors_service"
+path = "src/service.rs"
+
+[profile.release]
+opt-level = 'z'
+lto = true

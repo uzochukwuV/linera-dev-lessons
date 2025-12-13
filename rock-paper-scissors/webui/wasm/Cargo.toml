@@ -1,0 +1,19 @@
+[package]
+name = "rock-paper-scissors-wasm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+async-graphql = "=7.0.17"
+linera-sdk = "0.15.7"
+serde = { version = "1.0.215", features = ["derive"] }
+wasm-bindgen = "0.2.99"
+bcs = "0.1.6"
+blake3 = "1.5.5"
+
+[profile.release]
+opt-level = 'z'
+lto = true
